@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>CEN Bible 예수시대 Matrix</title>
+<meta name="theme-color" content="#061015" />
+<meta name="description" content="성육신부터 부활까지 예수시대 복음의 흐름 Matrix" />
+<link rel="manifest" href="manifest.json" />
+<style>
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:#061015;color:#fff;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body{min-height:100vh}.page{width:min(100vw,620px);margin:0 auto;padding-bottom:82px;background:#061015}.matrix-bg{position:relative;width:100%;aspect-ratio:1024/1792;background:url('assets/jesus-main-bg-final.png?v=mainbg1') top center/100% 100% no-repeat;box-shadow:0 0 40px rgba(0,0,0,.45);overflow:hidden}.hotspot{position:absolute;left:0;right:0;display:block;text-decoration:none;color:transparent;-webkit-tap-highlight-color:rgba(255,200,80,.15)}.hotspot:active{background:rgba(255,210,90,.08)}.hs1{top:18.8%;height:15.5%}.hs2{top:34.4%;height:15.4%}.hs3{top:49.8%;height:15.4%}.hs4{top:65.2%;height:15.5%}.hs5{top:80.7%;height:16.8%}.fab-list{position:fixed;right:14px;bottom:92px;z-index:30;border:1px solid rgba(246,198,91,.45);background:rgba(8,16,22,.82);color:#f6d483;border-radius:999px;padding:10px 13px;font-weight:950;box-shadow:0 8px 24px rgba(0,0,0,.35);backdrop-filter:blur(8px)}.bottom{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(5,11,16,.94);border-top:1px solid rgba(246,198,91,.35);display:grid;grid-template-columns:repeat(4,1fr);gap:7px;padding:9px 10px calc(9px + env(safe-area-inset-bottom));backdrop-filter:blur(10px)}.bottom a,.bottom button{border:1px solid rgba(246,198,91,.32);background:rgba(255,255,255,.04);color:#f8e7bd;border-radius:13px;min-height:44px;font-size:11px;font-weight:950;text-decoration:none;display:flex;align-items:center;justify-content:center;text-align:center}.bottom button{font-family:inherit}.bottom .main{background:linear-gradient(135deg,#8b5a13,#d8981e);color:#fff;border-color:#f6c65b}.drawer{position:fixed;inset:0;background:rgba(0,0,0,.52);display:none;align-items:flex-end;z-index:80}.drawer.show{display:flex}.panel{width:min(620px,100%);margin:0 auto;background:#071016;border:1px solid rgba(246,198,91,.35);border-radius:22px 22px 0 0;padding:15px 14px calc(18px + env(safe-area-inset-bottom));box-shadow:0 -16px 40px rgba(0,0,0,.45)}.panel-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.panel-head b{font-size:18px;color:#f8d989}.close{border:0;background:#d8981e;color:#fff;border-radius:10px;padding:8px 11px;font-weight:950}.hub-list{display:grid;gap:8px}.hub-list a{text-decoration:none;color:#fff;border:1px solid rgba(246,198,91,.28);background:rgba(255,255,255,.04);border-radius:14px;padding:12px}.hub-list b{display:block;font-size:14px}.hub-list span{display:block;margin-top:4px;color:#d7c7a4;font-size:12px;line-height:1.35}@media(min-width:621px){.bottom{left:50%;transform:translateX(-50%);width:620px;border-left:1px solid rgba(246,198,91,.22);border-right:1px solid rgba(246,198,91,.22)}}
+</style>
+</head>
+<body>
+<div class="page">
+  <main class="matrix-bg" aria-label="예수시대 Matrix">
+    <a class="hotspot hs1" href="hubs/index.html?hub=incarnation" aria-label="성육신 허브"></a>
+    <a class="hotspot hs2" href="hubs/index.html?hub=ministry" aria-label="공생애 허브"></a>
+    <a class="hotspot hs3" href="hubs/index.html?hub=revelation" aria-label="메시아 계시 허브"></a>
+    <a class="hotspot hs4" href="hubs/index.html?hub=cross" aria-label="십자가 허브"></a>
+    <a class="hotspot hs5" href="hubs/index.html?hub=resurrection" aria-label="부활 허브"></a>
+  </main>
+</div>
+<button class="fab-list" type="button" onclick="openHubList()">허브목록</button>
+<nav class="bottom" aria-label="하단 메뉴">
+  <a href="https://centiger.github.io/cen-bible-chrololgy/?view=timeline">성경연대기</a>
+  <a href="https://centiger.github.io/cen-bible-chrololgy/#hub">연결탐험</a>
+  <a href="https://centiger.github.io/CEN-Bible2.0/#overview66">한눈에 성경</a>
+  <button class="main" type="button" onclick="openHubList()">허브</button>
+</nav>
+<div class="drawer" id="hubDrawer" aria-hidden="true">
+  <div class="panel">
+    <div class="panel-head"><b>예수시대 허브 목록</b><button class="close" type="button" onclick="closeHubList()">닫기</button></div>
+    <div class="hub-list">
+      <a href="hubs/index.html?hub=incarnation"><b>1. 성육신 허브</b><span>하나님이 우리를 찾아오셨다</span></a>
+      <a href="hubs/index.html?hub=ministry"><b>2. 공생애 허브</b><span>하나님 나라가 시작되었다</span></a>
+      <a href="hubs/index.html?hub=revelation"><b>3. 메시아 계시 허브</b><span>예수는 그리스도이시다</span></a>
+      <a href="hubs/index.html?hub=cross"><b>4. 십자가 허브</b><span>예수는 우리를 위해 죽으셨다</span></a>
+      <a href="hubs/index.html?hub=resurrection"><b>5. 부활 허브</b><span>예수는 살아 계신 주님이시다</span></a>
+    </div>
+  </div>
+</div>
+<script>
+function openHubList(){const d=document.getElementById('hubDrawer');d.classList.add('show');d.setAttribute('aria-hidden','false')}
+function closeHubList(){const d=document.getElementById('hubDrawer');d.classList.remove('show');d.setAttribute('aria-hidden','true')}
+document.getElementById('hubDrawer').addEventListener('click',e=>{if(e.target.id==='hubDrawer')closeHubList()});
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
+</script>
+</body>
+</html>
