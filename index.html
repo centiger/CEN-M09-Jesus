@@ -108,6 +108,32 @@ footer.actions .action{
 }
 </style>
 
+
+<style id="jesus-drag-full-image-v5">
+html,body{
+  overscroll-behavior-y:contain;
+}
+body{
+  padding-bottom:145px !important;
+}
+/* background/main image must be fully scrollable and keep its natural ratio */
+img.bg, .bg img, #bg, .background img, .matrix-bg, .main-bg, .page-bg{
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  max-width:none !important;
+  object-fit:contain !important;
+}
+/* do not restrict main scroll area too tightly */
+.mainScroll,.scrollArea,.matrixScroll,#scrollArea,#matrixScroll{
+  max-height:none !important;
+  overflow-y:visible !important;
+}
+@media(max-width:420px){
+  body{padding-bottom:142px !important}
+}
+</style>
+
 </head>
 <body>
 <div class="app">
@@ -173,28 +199,5 @@ if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').cat
   },true);
 })();
 </script>
-
-
-<script id="CEN-JESUS-DRAG-LIMIT-V4">
-(function(){
-  function clampScroll(){
-    const bg = document.querySelector('img.bg, .bg img, #bg, .background img, .matrix-bg');
-    if(!bg) return;
-    const rect = bg.getBoundingClientRect();
-    const pageTop = window.scrollY + rect.top;
-    const limit = Math.max(0, pageTop + bg.offsetHeight - window.innerHeight + 8);
-    if(window.scrollY > limit) window.scrollTo(0, limit);
-  }
-  let ticking=false;
-  window.addEventListener('scroll',function(){
-    if(ticking) return;
-    ticking=true;
-    requestAnimationFrame(function(){clampScroll(); ticking=false;});
-  },{passive:true});
-  window.addEventListener('load',clampScroll);
-  window.addEventListener('resize',clampScroll);
-})();
-</script>
-
 </body>
 </html>
