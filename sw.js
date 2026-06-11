@@ -1,4 +1,4 @@
-const CACHE='cen-jesus-matrix-final-v2-standard-hubs-v1';
+const CACHE='cen-jesus-matrix-final-v2-standard-hubs-v1-flowbarfix-v2';
 const ASSETS=['./','./index.html','./manifest.json','./assets/jesus-main-bg-final.png','./hubs/index.html'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).catch(()=>{}));self.skipWaiting();});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))));self.clients.claim();});

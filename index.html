@@ -13,6 +13,26 @@
 .bottom{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(6,13,18,.88);backdrop-filter:blur(12px);border-top:1px solid rgba(246,198,91,.28);display:grid;grid-template-columns:repeat(4,1fr);gap:7px;padding:9px 10px calc(9px + env(safe-area-inset-bottom));max-width:853px;margin:0 auto}.bottom a,.bottom button{border:1px solid rgba(246,198,91,.28);background:rgba(255,255,255,.06);color:#f5e8c8;border-radius:13px;padding:10px 4px;font-size:11px;font-weight:950;text-decoration:none;text-align:center}.bottom .main{background:linear-gradient(135deg,#d79a25,#8b5a11);color:#fff;border-color:#f6c65b}.drawer{position:fixed;inset:0;background:rgba(0,0,0,.48);display:none;align-items:flex-end;z-index:50}.drawer.show{display:flex}.drawer-card{width:100%;max-width:853px;margin:0 auto;background:#09151c;border:1px solid rgba(246,198,91,.35);border-radius:22px 22px 0 0;padding:15px 14px calc(16px + env(safe-area-inset-bottom));box-shadow:0 -14px 36px rgba(0,0,0,.45)}.drawer-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.drawer-head b{font-size:18px;color:#f6c65b}.close{border:0;background:#d79a25;color:#111;border-radius:10px;padding:8px 10px;font-weight:950}.hub-list{display:grid;gap:8px}.hub-list a{display:block;text-decoration:none;background:rgba(255,255,255,.06);border:1px solid rgba(246,198,91,.25);border-radius:14px;padding:12px;color:#fff}.hub-list b{display:block;font-size:14px}.hub-list span{display:block;margin-top:4px;color:#d8c9a8;font-size:12px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
 @media(min-width:854px){.bottom{left:50%;right:auto;transform:translateX(-50%);width:853px}}
 </style>
+<style id="jesus-flow-strip-style">
+.jesus-flow-strip{
+position:fixed;left:0;right:0;bottom:64px;z-index:90;
+background:linear-gradient(180deg,rgba(5,10,17,.98),rgba(5,10,17,.96));
+box-shadow:0 -10px 28px rgba(0,0,0,.55),0 10px 22px rgba(0,0,0,.55);
+border-top:1px solid rgba(255,207,117,.38);
+border-bottom:1px solid rgba(255,207,117,.28);
+color:#ffd66b;text-align:center;font-size:13px;font-weight:950;
+letter-spacing:-.035em;padding:10px 8px 9px;
+white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.jesus-flow-strip::before{
+content:"";position:absolute;left:0;right:0;top:-18px;height:18px;
+background:linear-gradient(to top,rgba(5,10,17,.86),rgba(5,10,17,0));
+pointer-events:none;
+}
+@media(max-width:420px){
+.jesus-flow-strip{font-size:12px;bottom:62px;padding:9px 6px 8px}
+}
+</style>
 </head>
 <body>
 <div class="app">
@@ -45,5 +65,6 @@ document.getElementById('closeBtn').onclick=()=>{drawer.classList.remove('show')
 drawer.onclick=e=>{if(e.target===drawer){drawer.classList.remove('show');drawer.setAttribute('aria-hidden','true')}};
 if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').catch(()=>{})}
 </script>
+<div class="jesus-flow-strip">성육신 → 공생애 → 메시야 계시 → 십자가 → 부활</div>
 </body>
 </html>
