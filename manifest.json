@@ -1,6 +1,6 @@
 {
   "name": "CEN Bible 예수시대 Matrix",
-  "short_name": "예수시대 Matrix",
+  "short_name": "예수시대",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#071016",
@@ -16,5 +16,6 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "scope": "./"
 }

@@ -123,6 +123,29 @@ body{padding-bottom:96px!important}
 }
 </style>
 
+
+<style id="jesus-scroll-limit-v11-css">
+body{padding-bottom:116px!important; background:#05080d!important;}
+.app{padding-bottom:0!important;}
+.cen-bottom-solid-bg{height:112px!important;background:#05080d!important;box-shadow:none!important;}
+.jesus-flow-strip{
+  bottom:64px!important;
+  background:#05080d!important;
+  box-shadow:none!important;
+  border-top:1px solid rgba(255,207,117,.28)!important;
+  border-bottom:0!important;
+}
+footer.actions{
+  background:#05080d!important;
+  box-shadow:none!important;
+}
+@media(max-width:390px){
+  body{padding-bottom:112px!important}
+  .cen-bottom-solid-bg{height:108px!important}
+  .jesus-flow-strip{bottom:62px!important}
+}
+</style>
+
 </head>
 <body>
 <div class="app">
@@ -227,6 +250,38 @@ if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').cat
     const url=links[key] || links[(btn.textContent||'').trim()];
     if(url) location.href=url;
   },true);
+})();
+</script>
+
+
+<script id="CEN-JESUS-SCROLL-LIMIT-V11">
+(function(){
+  const EXTRA_AFTER_IMAGE = -110; // 음수일수록 한계선이 위로 올라감
+  function bottomUiHeight(){
+    const flow = document.querySelector('.jesus-flow-strip, .flowbar');
+    const nav = document.querySelector('footer.actions, nav.bottom');
+    return (flow ? flow.offsetHeight : 0) + (nav ? nav.offsetHeight : 0);
+  }
+  function maxScrollY(){
+    const img = document.querySelector('img.bg');
+    if(!img) return document.documentElement.scrollHeight - window.innerHeight;
+    const rect = img.getBoundingClientRect();
+    const imgBottom = window.scrollY + rect.bottom;
+    const max = imgBottom - window.innerHeight + bottomUiHeight() + EXTRA_AFTER_IMAGE;
+    return Math.max(0, max);
+  }
+  let ticking=false;
+  function clamp(){
+    const max=maxScrollY();
+    if(window.scrollY > max) window.scrollTo(0,max);
+  }
+  window.addEventListener('scroll',function(){
+    if(ticking) return;
+    ticking=true;
+    requestAnimationFrame(function(){clamp();ticking=false;});
+  },{passive:true});
+  window.addEventListener('load',clamp);
+  window.addEventListener('resize',clamp);
 })();
 </script>
 
