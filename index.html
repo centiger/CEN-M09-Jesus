@@ -9,35 +9,9 @@
 <link rel="manifest" href="manifest.json" />
 <style>
 *{box-sizing:border-box}html,body{margin:0;padding:0;background:#071016;color:#fff;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body{min-height:100vh}.app{max-width:853px;margin:0 auto;position:relative;padding-bottom:76px}.stage{position:relative;width:100%;line-height:0}.bg{display:block;width:100%;height:auto;user-select:none;-webkit-user-drag:none}.hotspot{position:absolute;left:0;right:0;display:block;z-index:5;text-decoration:none;-webkit-tap-highlight-color:rgba(246,198,91,.25)}.hotspot:active{background:rgba(246,198,91,.08)}.hs1{top:17.8%;height:15.2%}.hs2{top:33.0%;height:15.3%}.hs3{top:48.3%;height:15.4%}.hs4{top:63.7%;height:15.0%}.hs5{top:78.7%;height:16.4%}
-.flowbar{position:fixed;left:0;right:0;bottom:64px;z-index:29;background:rgba(6,13,18,.88);border-top:1px solid rgba(246,198,91,.18);padding:8px 10px;text-align:center;color:#f6c65b;font-size:12px;font-weight:900;max-width:853px;margin:0 auto}
-.bottom{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(6,13,18,.88);backdrop-filter:blur(12px);border-top:1px solid rgba(246,198,91,.28);display:grid;grid-template-columns:repeat(4,1fr);gap:7px;padding:9px 10px calc(9px + env(safe-area-inset-bottom));max-width:853px;margin:0 auto}.bottom a,.bottom button{border:1px solid rgba(246,198,91,.28);background:rgba(255,255,255,.06);color:#f5e8c8;border-radius:13px;padding:10px 4px;font-size:11px;font-weight:950;text-decoration:none;text-align:center}.bottom .main{background:linear-gradient(135deg,#d79a25,#8b5a11);color:#fff;border-color:#f6c65b}.drawer{position:fixed;inset:0;background:rgba(0,0,0,.48);display:none;align-items:flex-end;z-index:50}.drawer.show{display:flex}.drawer-card{width:100%;max-width:853px;margin:0 auto;background:#09151c;border:1px solid rgba(246,198,91,.35);border-radius:22px 22px 0 0;padding:15px 14px calc(16px + env(safe-area-inset-bottom));box-shadow:0 -14px 36px rgba(0,0,0,.45)}.drawer-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.drawer-head b{font-size:18px;color:#f6c65b}.close{border:0;background:#d79a25;color:#111;border-radius:10px;padding:8px 10px;font-weight:950}.hub-list{display:grid;gap:8px}.hub-list a{display:block;text-decoration:none;background:rgba(255,255,255,.06);border:1px solid rgba(246,198,91,.25);border-radius:14px;padding:12px;color:#fff}.hub-list b{display:block;font-size:14px}.hub-list span{display:block;margin-top:4px;color:#d8c9a8;font-size:12px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
-@media(min-width:854px){.bottom{left:50%;right:auto;transform:translateX(-50%);width:853px}}
-</style>
-<style id="jesus-drag-full-image-v5">
-html,body{
-  overscroll-behavior-y:contain;
-}
-body{
-  padding-bottom:145px !important;
-}
-/* background/main image must be fully scrollable and keep its natural ratio */
-img.bg, .bg img, #bg, .background img, .matrix-bg, .main-bg, .page-bg{
-  display:block !important;
-  width:100% !important;
-  height:auto !important;
-  max-width:none !important;
-  object-fit:contain !important;
-}
-/* do not restrict main scroll area too tightly */
-.mainScroll,.scrollArea,.matrixScroll,#scrollArea,#matrixScroll{
-  max-height:none !important;
-  overflow-y:visible !important;
-}
-@media(max-width:420px){
-  body{padding-bottom:142px !important}
-}
-</style>
+.drawer{position:fixed;inset:0;background:rgba(0,0,0,.48);display:none;align-items:flex-end;z-index:50}.drawer.show{display:flex}.drawer-card{width:100%;max-width:853px;margin:0 auto;background:#09151c;border:1px solid rgba(246,198,91,.35);border-radius:22px 22px 0 0;padding:15px 14px calc(16px + env(safe-area-inset-bottom));box-shadow:0 -14px 36px rgba(0,0,0,.45)}.drawer-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.drawer-head b{font-size:18px;color:#f6c65b}.close{border:0;background:#d79a25;color:#111;border-radius:10px;padding:8px 10px;font-weight:950}.hub-list{display:grid;gap:8px}.hub-list a{display:block;text-decoration:none;background:rgba(255,255,255,.06);border:1px solid rgba(246,198,91,.25);border-radius:14px;padding:12px;color:#fff}.hub-list b{display:block;font-size:14px}.hub-list span{display:block;margin-top:4px;color:#d8c9a8;font-size:12px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
 
+</style>
 <style id="jesus-button-position-v8">
 .stage{position:relative}
 .mainActionRow{
@@ -123,22 +97,27 @@ body{padding-bottom:96px!important}
 }
 </style>
 
-<style id="jesus-scroll-limit-v12-css">
-.app{padding-bottom:0!important;}
-.stage{margin-bottom:0!important;}
-body{padding-bottom:112px!important;background:#05080d!important;}
-.cen-bottom-solid-bg{height:108px!important;background:#05080d!important;box-shadow:none!important;}
-.jesus-flow-strip{
-  bottom:62px!important;
-  background:#05080d!important;
-  box-shadow:none!important;
-}
-footer.actions{background:#05080d!important;box-shadow:none!important;}
-@media(max-width:390px){
-  body{padding-bottom:108px!important}
-  .cen-bottom-solid-bg{height:104px!important}
-  .jesus-flow-strip{bottom:60px!important}
-}
+<style id="jesus-final-clean-v13">
+html,body{margin:0;background:#05080d!important;overscroll-behavior-y:contain}
+body{padding-bottom:112px!important}
+.app{max-width:853px;margin:0 auto;position:relative;padding-bottom:0!important}
+.stage{position:relative;width:100%;line-height:0;margin-bottom:0!important}
+.bg{display:block!important;width:100%!important;height:auto!important;user-select:none;-webkit-user-drag:none;object-fit:contain!important}
+.hotspot{position:absolute;left:0;right:0;display:block;z-index:5;text-decoration:none;-webkit-tap-highlight-color:rgba(246,198,91,.25)}
+.hs1{top:17.8%;height:15.2%}.hs2{top:33.0%;height:15.3%}.hs3{top:48.3%;height:15.4%}.hs4{top:63.7%;height:15.0%}.hs5{top:78.7%;height:16.4%}
+.mainActionRow{position:absolute;left:19.5%;width:36%;z-index:18;display:grid;grid-template-columns:.72fr 1fr 1fr;gap:4px;line-height:1}
+.mainActionRow .miniBtn{display:flex;align-items:center;justify-content:center;min-height:22px;padding:3px 2px;border-radius:999px;border:1px solid rgba(255,218,135,.5);background:rgba(4,8,14,.7);color:#ffe8a8;text-decoration:none;font-weight:950;font-size:9.3px;letter-spacing:-.075em;box-shadow:none;backdrop-filter:blur(3px)}
+.mainActionRow .miniBtn.hub{background:linear-gradient(135deg,rgba(215,154,37,.9),rgba(116,72,13,.88));color:#fff;border-color:rgba(255,222,144,.72)}
+.ar1{top:34.1%!important}.ar2{top:49.4%!important}.ar3{top:61.9%}.ar4{top:77.1%}.ar5{top:92.2%}
+.cen-bottom-solid-bg{position:fixed;left:0;right:0;bottom:0;height:108px;z-index:80;pointer-events:none;background:#05080d;box-shadow:none}
+.jesus-flow-strip{position:fixed!important;left:0!important;right:0!important;bottom:62px!important;z-index:110!important;background:#05080d!important;border-top:1px solid rgba(255,207,117,.28)!important;border-bottom:0!important;color:#ffd66b!important;text-align:center!important;font-weight:950!important;letter-spacing:-.035em!important;padding:6px 6px 5px!important;line-height:1.15!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;box-shadow:none!important}
+.jesus-flow-strip .flow-title{font-size:10.5px;color:#cfa64b;margin-bottom:2px}
+.jesus-flow-strip .flow-text{font-size:12px}
+footer.actions{position:fixed!important;left:0!important;right:0!important;bottom:0!important;z-index:120!important;display:grid!important;grid-template-columns:repeat(4,1fr)!important;gap:6px!important;padding:7px 9px calc(8px + env(safe-area-inset-bottom))!important;min-height:62px!important;background:#05080d!important;border-top:1px solid rgba(255,207,117,.22)!important;box-shadow:none!important}
+footer.actions .action{display:flex!important;align-items:center!important;justify-content:center!important;min-height:40px!important;border-radius:13px!important;border:1px solid rgba(255,207,117,.42)!important;background:#101821!important;color:#ffe6a8!important;font-weight:950!important;font-size:12px!important;text-decoration:none!important;text-align:center!important;cursor:pointer!important}
+footer.actions .action[data-link="hub"],footer.actions .main{background:linear-gradient(135deg,#d79a25,#8b5a11)!important;color:#fff!important;border-color:#f6c65b!important}
+.drawer{position:fixed;inset:0;background:rgba(0,0,0,.48);display:none;align-items:flex-end;z-index:150}.drawer.show{display:flex}.drawer-card{width:100%;max-width:853px;margin:0 auto;background:#09151c;border:1px solid rgba(246,198,91,.35);border-radius:22px 22px 0 0;padding:15px 14px calc(16px + env(safe-area-inset-bottom));box-shadow:0 -14px 36px rgba(0,0,0,.45)}.drawer-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.drawer-head b{font-size:18px;color:#f6c65b}.close{border:0;background:#d79a25;color:#111;border-radius:10px;padding:8px 10px;font-weight:950}.hub-list{display:grid;gap:8px}.hub-list a{display:block;text-decoration:none;background:rgba(255,255,255,.06);border:1px solid rgba(246,198,91,.25);border-radius:14px;padding:12px;color:#fff}.hub-list b{display:block;font-size:14px}.hub-list span{display:block;margin-top:4px;color:#d8c9a8;font-size:12px}
+@media(max-width:390px){body{padding-bottom:108px!important}.mainActionRow{left:19%;width:37%;gap:3px}.mainActionRow .miniBtn{font-size:8.5px;min-height:20px;padding:3px 1px}.ar1{top:33.9%!important}.ar2{top:49.2%!important}.ar3{top:61.7%}.ar4{top:76.9%}.ar5{top:92.0%}.cen-bottom-solid-bg{height:104px}.jesus-flow-strip{bottom:60px!important}.jesus-flow-strip .flow-title{font-size:10px}.jesus-flow-strip .flow-text{font-size:11.5px}footer.actions{min-height:60px!important}footer.actions .action{min-height:39px!important;font-size:11px!important}}
 </style>
 
 </head>
@@ -193,15 +172,7 @@ document.getElementById('closeBtn').onclick=()=>{drawer.classList.remove('show')
 drawer.onclick=e=>{if(e.target===drawer){drawer.classList.remove('show');drawer.setAttribute('aria-hidden','true')}};
 if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').catch(()=>{})}
 </script>
-<div class="cen-bottom-solid-bg"></div>
-<div class="jesus-flow-strip"><div style="font-size:11px;color:#cfa64b;margin-bottom:2px;">예수시대 핵심흐름</div>성육신 → 공생애 → 메시야 계시 → 십자가 → 부활</div>
-<footer class="actions">
-  <button class="action" type="button" data-link="timeline">성경연대기</button>
-  <button class="action" type="button" data-link="connect">연결탐험</button>
-  <button class="action" type="button" data-link="overview">한눈에 성경</button>
-  <button class="action" type="button" data-link="hub">허브</button>
-</footer>
-
+<div class="flow-text">성육신 → 공생애 → 메시야 계시 → 십자가 → 부활</div></div>
 <script id="CEN-JESUS-FOOTER-HANDLER-V9">
 (function(){
   const links={
@@ -248,36 +219,36 @@ if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').cat
 })();
 </script>
 
-<script id="CEN-JESUS-SCROLL-LIMIT-V12">
+<script id="CEN-JESUS-SCROLL-LIMIT-V13">
 (function(){
-  const EXTRA_AFTER_IMAGE = 80; 
+  const EXTRA_AFTER_IMAGE = 30;
   function bottomUiHeight(){
-    const flow = document.querySelector('.jesus-flow-strip, .flowbar');
-    const nav = document.querySelector('footer.actions, nav.bottom');
-    return (flow ? flow.offsetHeight : 0) + (nav ? nav.offsetHeight : 0);
+    const flow=document.querySelector('.jesus-flow-strip');
+    const nav=document.querySelector('footer.actions');
+    return (flow?flow.offsetHeight:0)+(nav?nav.offsetHeight:0);
   }
   function maxScrollY(){
-    const img = document.querySelector('img.bg');
-    if(!img) return Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
-    const rect = img.getBoundingClientRect();
-    const imgBottom = window.scrollY + rect.bottom;
-    const max = imgBottom - window.innerHeight + bottomUiHeight() + EXTRA_AFTER_IMAGE;
-    return Math.max(0, max);
+    const img=document.querySelector('img.bg');
+    if(!img) return Math.max(0,document.documentElement.scrollHeight-window.innerHeight);
+    const rect=img.getBoundingClientRect();
+    const imgBottom=window.scrollY+rect.bottom;
+    return Math.max(0,imgBottom-window.innerHeight+bottomUiHeight()+EXTRA_AFTER_IMAGE);
   }
   let ticking=false;
-  function clamp(){
-    const max=maxScrollY();
-    if(window.scrollY > max) window.scrollTo(0,max);
-  }
-  window.addEventListener('scroll',function(){
-    if(ticking) return;
-    ticking=true;
-    requestAnimationFrame(function(){clamp();ticking=false;});
-  },{passive:true});
+  function clamp(){const max=maxScrollY(); if(window.scrollY>max) window.scrollTo(0,max);}
+  window.addEventListener('scroll',function(){if(ticking)return;ticking=true;requestAnimationFrame(function(){clamp();ticking=false;});},{passive:true});
   window.addEventListener('load',function(){setTimeout(clamp,120)});
   window.addEventListener('resize',clamp);
 })();
 </script>
 
+<div class="cen-bottom-solid-bg"></div>
+<div class="jesus-flow-strip"><div class="flow-title">예수시대 핵심흐름</div><div class="flow-text">성육신 → 공생애 → 메시야 계시 → 십자가 → 부활</div></div>
+<footer class="actions">
+  <button class="action" type="button" data-link="timeline">성경연대기</button>
+  <button class="action" type="button" data-link="connect">연결탐험</button>
+  <button class="action" type="button" data-link="overview">한눈에 성경</button>
+  <button class="action" type="button" data-link="hub">허브</button>
+</footer>
 </body>
 </html>
