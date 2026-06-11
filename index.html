@@ -38,118 +38,74 @@ img.bg, .bg img, #bg, .background img, .matrix-bg, .main-bg, .page-bg{
 }
 </style>
 
-<style id="jesus-main-ui-refine-v7">
-/* 메인 3버튼: 배경그림을 덜 가리도록 타임라인 주제어 아래쪽으로 이동 */
+<style id="jesus-button-position-v8">
 .stage{position:relative}
 .mainActionRow{
   position:absolute;
   left:19.5%;
-  width:34%;
+  width:36%;
   z-index:18;
   display:grid;
-  grid-template-columns:.74fr 1fr 1fr;
+  grid-template-columns:.72fr 1fr 1fr;
   gap:4px;
   line-height:1;
 }
 .mainActionRow .miniBtn{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  min-height:24px;
-  padding:4px 2px;
-  border-radius:999px;
-  border:1px solid rgba(255,218,135,.48);
-  background:rgba(4,8,14,.66);
-  color:#ffe8a8;
-  text-decoration:none;
-  font-weight:950;
-  font-size:9.5px;
-  letter-spacing:-.07em;
-  box-shadow:none;
-  backdrop-filter:blur(3px);
-  -webkit-tap-highlight-color:rgba(255,218,135,.18);
+  display:flex;align-items:center;justify-content:center;
+  min-height:22px;padding:3px 2px;border-radius:999px;
+  border:1px solid rgba(255,218,135,.5);
+  background:rgba(4,8,14,.7);color:#ffe8a8;text-decoration:none;
+  font-weight:950;font-size:9.3px;letter-spacing:-.075em;
+  box-shadow:none;backdrop-filter:blur(3px);
 }
 .mainActionRow .miniBtn.hub{
-  background:linear-gradient(135deg,rgba(215,154,37,.88),rgba(116,72,13,.88));
-  color:#fff;
-  border-color:rgba(255,222,144,.68);
+  background:linear-gradient(135deg,rgba(215,154,37,.9),rgba(116,72,13,.88));
+  color:#fff;border-color:rgba(255,222,144,.72);
 }
 .mainActionRow .miniBtn:active{transform:scale(.97)}
-/* 각 주제어/간략설명 밑으로 자연스럽게 붙임 */
-.ar1{top:26.4%}
-.ar2{top:41.7%}
-.ar3{top:57.0%}
-.ar4{top:72.25%}
-.ar5{top:87.45%}
+.ar1{top:31.3%}
+.ar2{top:46.6%}
+.ar3{top:61.9%}
+.ar4{top:77.1%}
+.ar5{top:92.2%}
 
-/* 하단은 그림자 효과를 버리고 검은 패널 한 장으로 단순화 */
 .cen-bottom-solid-bg{
-  position:fixed;
-  left:0;right:0;bottom:0;
-  height:118px;
-  z-index:80;
-  pointer-events:none;
-  background:#05080d;
-  box-shadow:none;
+  position:fixed;left:0;right:0;bottom:0;height:118px;z-index:80;
+  pointer-events:none;background:#05080d;box-shadow:none;
 }
 .jesus-flow-strip{
-  position:fixed!important;
-  left:0!important;right:0!important;
-  bottom:66px!important;
-  z-index:110!important;
-  background:#05080d!important;
-  border-top:1px solid rgba(255,207,117,.28)!important;
-  border-bottom:0!important;
-  color:#ffd66b!important;
-  text-align:center!important;
-  font-size:12px!important;
-  font-weight:950!important;
-  letter-spacing:-.035em!important;
-  padding:8px 6px 7px!important;
-  line-height:1.15!important;
-  white-space:nowrap!important;
-  overflow:hidden!important;
-  text-overflow:ellipsis!important;
+  position:fixed!important;left:0!important;right:0!important;bottom:66px!important;
+  z-index:110!important;background:#05080d!important;
+  border-top:1px solid rgba(255,207,117,.28)!important;border-bottom:0!important;
+  color:#ffd66b!important;text-align:center!important;font-size:12px!important;
+  font-weight:950!important;letter-spacing:-.035em!important;
+  padding:8px 6px 7px!important;line-height:1.15!important;
+  white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;
   box-shadow:none!important;
 }
 footer.actions{
-  position:fixed!important;
-  left:0!important;right:0!important;bottom:0!important;
-  z-index:120!important;
-  display:grid!important;
-  grid-template-columns:repeat(4,1fr)!important;
-  gap:6px!important;
-  padding:7px 9px calc(8px + env(safe-area-inset-bottom))!important;
-  min-height:66px!important;
-  background:#05080d!important;
-  border-top:1px solid rgba(255,207,117,.22)!important;
-  box-shadow:none!important;
+  position:fixed!important;left:0!important;right:0!important;bottom:0!important;
+  z-index:120!important;display:grid!important;grid-template-columns:repeat(4,1fr)!important;
+  gap:6px!important;padding:7px 9px calc(8px + env(safe-area-inset-bottom))!important;
+  min-height:66px!important;background:#05080d!important;
+  border-top:1px solid rgba(255,207,117,.22)!important;box-shadow:none!important;
 }
 footer.actions .action{
-  display:flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  min-height:43px!important;
-  border-radius:13px!important;
-  border:1px solid rgba(255,207,117,.42)!important;
-  background:#101821!important;
-  color:#ffe6a8!important;
-  font-weight:950!important;
-  font-size:12px!important;
-  text-decoration:none!important;
-  text-align:center!important;
-  cursor:pointer!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  min-height:43px!important;border-radius:13px!important;
+  border:1px solid rgba(255,207,117,.42)!important;background:#101821!important;
+  color:#ffe6a8!important;font-weight:950!important;font-size:12px!important;
+  text-decoration:none!important;text-align:center!important;cursor:pointer!important;
 }
-footer.actions .action[data-link="hub"],
-footer.actions .main{
+footer.actions .action[data-link="hub"], footer.actions .main{
   background:linear-gradient(135deg,#d79a25,#8b5a11)!important;
-  color:#fff!important;
-  border-color:#f6c65b!important;
+  color:#fff!important;border-color:#f6c65b!important;
 }
 body{padding-bottom:128px!important}
 @media(max-width:390px){
-  .mainActionRow{left:19%;width:35%;gap:3px}
-  .mainActionRow .miniBtn{font-size:8.8px;min-height:22px;padding:3px 1px}
+  .mainActionRow{left:19%;width:37%;gap:3px}
+  .mainActionRow .miniBtn{font-size:8.5px;min-height:20px;padding:3px 1px}
+  .ar1{top:31.1%}.ar2{top:46.4%}.ar3{top:61.7%}.ar4{top:76.9%}.ar5{top:92.0%}
   .jesus-flow-strip{bottom:64px!important;font-size:11.5px!important;padding:7px 5px 6px!important}
   footer.actions{min-height:64px!important}
   footer.actions .action{min-height:41px!important;font-size:11px!important}
