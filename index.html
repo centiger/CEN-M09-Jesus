@@ -70,11 +70,11 @@ img.bg, .bg img, #bg, .background img, .matrix-bg, .main-bg, .page-bg{
 .ar5{top:92.2%}
 
 .cen-bottom-solid-bg{
-  position:fixed;left:0;right:0;bottom:0;height:118px;z-index:80;
+  position:fixed;left:0;right:0;bottom:0;height:96px;z-index:80;
   pointer-events:none;background:#05080d;box-shadow:none;
 }
 .jesus-flow-strip{
-  position:fixed!important;left:0!important;right:0!important;bottom:66px!important;
+  position:fixed!important;left:0!important;right:0!important;bottom:64px!important;
   z-index:110!important;background:#05080d!important;
   border-top:1px solid rgba(255,207,117,.28)!important;border-bottom:0!important;
   color:#ffd66b!important;text-align:center!important;font-size:12px!important;
@@ -101,7 +101,7 @@ footer.actions .action[data-link="hub"], footer.actions .main{
   background:linear-gradient(135deg,#d79a25,#8b5a11)!important;
   color:#fff!important;border-color:#f6c65b!important;
 }
-body{padding-bottom:128px!important}
+body{padding-bottom:96px!important}
 @media(max-width:390px){
   .mainActionRow{left:19%;width:37%;gap:3px}
   .mainActionRow .miniBtn{font-size:8.5px;min-height:20px;padding:3px 1px}
@@ -176,7 +176,7 @@ drawer.onclick=e=>{if(e.target===drawer){drawer.classList.remove('show');drawer.
 if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').catch(()=>{})}
 </script>
 <div class="cen-bottom-solid-bg"></div>
-<div class="jesus-flow-strip">성육신 → 공생애 → 메시야 계시 → 십자가 → 부활</div>
+<div class="jesus-flow-strip"><div style="font-size:11px;color:#cfa64b;margin-bottom:2px;">예수시대 핵심흐름</div>성육신 → 공생애 → 메시야 계시 → 십자가 → 부활</div>
 <footer class="actions">
   <button class="action" type="button" data-link="timeline">성경연대기</button>
   <button class="action" type="button" data-link="connect">연결탐험</button>
