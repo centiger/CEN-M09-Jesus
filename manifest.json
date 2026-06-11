@@ -1,10 +1,12 @@
 {
-  "name": "CEN Bible 예수시대 Matrix",
-  "short_name": "예수시대",
+  "name": "CEN Bible 초대교회 Matrix",
+  "short_name": "초대교회 Matrix",
+  "description": "초대교회 핵심흐름 Matrix",
   "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
-  "background_color": "#071016",
-  "theme_color": "#071016",
+  "background_color": "#05080d",
+  "theme_color": "#05080d",
   "icons": [
     {
       "src": "icons/icon-192.png",
@@ -16,6 +18,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "scope": "./"
+  ]
 }
