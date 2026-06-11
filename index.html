@@ -123,26 +123,21 @@ body{padding-bottom:96px!important}
 }
 </style>
 
-
-<style id="jesus-scroll-limit-v11-css">
-body{padding-bottom:116px!important; background:#05080d!important;}
+<style id="jesus-scroll-limit-v12-css">
 .app{padding-bottom:0!important;}
-.cen-bottom-solid-bg{height:112px!important;background:#05080d!important;box-shadow:none!important;}
+.stage{margin-bottom:0!important;}
+body{padding-bottom:112px!important;background:#05080d!important;}
+.cen-bottom-solid-bg{height:108px!important;background:#05080d!important;box-shadow:none!important;}
 .jesus-flow-strip{
-  bottom:64px!important;
-  background:#05080d!important;
-  box-shadow:none!important;
-  border-top:1px solid rgba(255,207,117,.28)!important;
-  border-bottom:0!important;
-}
-footer.actions{
+  bottom:62px!important;
   background:#05080d!important;
   box-shadow:none!important;
 }
+footer.actions{background:#05080d!important;box-shadow:none!important;}
 @media(max-width:390px){
-  body{padding-bottom:112px!important}
-  .cen-bottom-solid-bg{height:108px!important}
-  .jesus-flow-strip{bottom:62px!important}
+  body{padding-bottom:108px!important}
+  .cen-bottom-solid-bg{height:104px!important}
+  .jesus-flow-strip{bottom:60px!important}
 }
 </style>
 
@@ -253,10 +248,9 @@ if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').cat
 })();
 </script>
 
-
-<script id="CEN-JESUS-SCROLL-LIMIT-V11">
+<script id="CEN-JESUS-SCROLL-LIMIT-V12">
 (function(){
-  const EXTRA_AFTER_IMAGE = -110; // 음수일수록 한계선이 위로 올라감
+  const EXTRA_AFTER_IMAGE = 80; 
   function bottomUiHeight(){
     const flow = document.querySelector('.jesus-flow-strip, .flowbar');
     const nav = document.querySelector('footer.actions, nav.bottom');
@@ -264,7 +258,7 @@ if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').cat
   }
   function maxScrollY(){
     const img = document.querySelector('img.bg');
-    if(!img) return document.documentElement.scrollHeight - window.innerHeight;
+    if(!img) return Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
     const rect = img.getBoundingClientRect();
     const imgBottom = window.scrollY + rect.bottom;
     const max = imgBottom - window.innerHeight + bottomUiHeight() + EXTRA_AFTER_IMAGE;
@@ -280,7 +274,7 @@ if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').cat
     ticking=true;
     requestAnimationFrame(function(){clamp();ticking=false;});
   },{passive:true});
-  window.addEventListener('load',clamp);
+  window.addEventListener('load',function(){setTimeout(clamp,120)});
   window.addEventListener('resize',clamp);
 })();
 </script>
