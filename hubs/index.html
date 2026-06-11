@@ -43,7 +43,7 @@ function esc(s){return String(s??'')}
 function hrefFor(h,dir){if(!h)return '../index.html';if(dir==='prev')return h.prev?`?hub=${h.prev}`:'../index.html';if(dir==='next')return h.next?`?hub=${h.next}`:'https://centiger.github.io/CEN-Matrix-Church/';}
 function labelFor(h,dir){if(dir==='prev')return h.prev?'이전허브':'Matrix';if(dir==='next')return h.next?'다음허브':'초대교회 Matrix'}
 function nodes(items){return (items||[]).map(i=>`<div class="node"><div class="ico">${esc(i.icon)}</div><b>${esc(i.title)}</b><small>${esc(i.text)}</small></div>`).join('')}
-function renderCards(title,items){if(!items||!items.length)return '';return `<section class="card"><h2 class="sectionTitle">${title}</h2><div class="infoGrid">${items.map(x=>`<div class="info"><b>${esc(x.title)}</b><p>${esc(x.text)}</p></div>`).join('')}</div></section>`}
+function renderCards(title,items){if(!items||!items.length)return '';const sid=title==='연결탐험'?'connections':(title==='통합탐험'?'integration':'');return `<section class="card" ${sid?`id="${sid}"`:''}><h2 class="sectionTitle">${title}</h2><div class="infoGrid">${items.map(x=>`<div class="info"><b>${esc(x.title)}</b><p>${esc(x.text)}</p></div>`).join('')}</div></section>`}
 function renderList(title,items){if(!items||!items.length)return '';return `<section class="card"><h2 class="sectionTitle">${title}</h2><div class="listFlow">${items.map(x=>`<div class="step">${esc(x)}</div>`).join('')}</div></section>`}
 function renderVerse(items){if(!items||!items.length)return '';return `<section class="card"><h2 class="sectionTitle">대표성구</h2><div class="verseCard">${items.map(v=>`<div class="verse"><b>${esc(v.ref)}</b><p>${esc(v.text)}</p></div>`).join('')}</div></section>`}
 function renderPeople(items){if(!items||!items.length)return '';return `<section class="card"><h2 class="sectionTitle">핵심인물</h2><div class="peopleGrid">${items.map(p=>`<div class="person"><span class="role">${esc(p.role)}</span><b>${esc(p.name)}</b><p>${esc(p.text)}</p></div>`).join('')}</div></section>`}
@@ -65,7 +65,7 @@ ${renderCards('통합탐험',h.integration)}
 ${renderBible(h.bible)}
 ${renderMessage(h.message)}
 `}
-function render(){const h=HUBS.find(x=>x.id===slug)||HUBS[0];slug=h.id;renderTabs();renderHeader(h);renderHubList();$('content').innerHTML=renderHub(h);$('prevBottom').href=hrefFor(h,'prev');$('prevBottom').textContent=labelFor(h,'prev');$('nextBottom').href=hrefFor(h,'next');$('nextBottom').textContent=labelFor(h,'next')}
+function render(){const h=HUBS.find(x=>x.id===slug)||HUBS[0];slug=h.id;renderTabs();renderHeader(h);renderHubList();$('content').innerHTML=renderHub(h);$('prevBottom').href=hrefFor(h,'prev');$('prevBottom').textContent=labelFor(h,'prev');$('nextBottom').href=hrefFor(h,'next');$('nextBottom').textContent=labelFor(h,'next');setTimeout(()=>{if(location.hash){const el=document.querySelector(location.hash);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});}},80)}
 async function init(){const res=await fetch('data/hubs.json?v=jesus-standard-v1');const data=await res.json();HUBS=data.hubs||[];slug=slug||data.defaultHub||(HUBS[0]&&HUBS[0].id);render()}
 $('hubListBtn').onclick=()=>$('drawer').classList.add('show');$('drawerClose').onclick=()=>$('drawer').classList.remove('show');$('drawer').onclick=e=>{if(e.target.id==='drawer')$('drawer').classList.remove('show')};
 if('serviceWorker'in navigator){navigator.serviceWorker.register('../sw.js').catch(()=>{})}
