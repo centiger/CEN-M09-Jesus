@@ -125,18 +125,36 @@ footer.actions .action[data-link="hub"],footer.actions .main{background:linear-g
 .flowbar, nav.bottom{display:none!important}
 </style>
 
+
+<style id="jesus-buttons-only-fix-v15">
+.hotspot,.hs1,.hs2,.hs3,.hs4,.hs5{
+  display:none!important;
+  pointer-events:none!important;
+}
+.bg{
+  pointer-events:none!important;
+}
+.mainActionRow,
+.mainActionRow a,
+footer.actions,
+footer.actions .action,
+#drawer,
+#drawer a,
+#drawer button{
+  pointer-events:auto!important;
+}
+</style>
+
 </head>
 <body>
 <div class="app">
   <div class="stage" aria-label="예수시대 Matrix 메인화면">
     <img class="bg" src="assets/jesus-main-bg-final.png?v=20260611-final2" alt="예수시대 Matrix 배경" />
-    <a class="hotspot hs1" href="hubs/index.html?hub=incarnation"><span class="sr-only">성육신 허브</span></a>
-    <a class="hotspot hs2" href="hubs/index.html?hub=ministry"><span class="sr-only">공생애 허브</span></a>
-    <a class="hotspot hs3" href="hubs/index.html?hub=revelation"><span class="sr-only">메시야 계시 허브</span></a>
-    <a class="hotspot hs4" href="hubs/index.html?hub=cross"><span class="sr-only">십자가 허브</span></a>
-    <a class="hotspot hs5" href="hubs/index.html?hub=resurrection"><span class="sr-only">부활 허브</span></a>
 
-    <div class="mainActionRow ar1">
+
+
+
+<div class="mainActionRow ar1">
       <a href="hubs/index.html?hub=incarnation" class="miniBtn hub">허브</a>
       <a href="hubs/index.html?hub=incarnation#connections" class="miniBtn">연결탐험</a>
       <a href="hubs/index.html?hub=incarnation#integration" class="miniBtn">통합탐험</a>
