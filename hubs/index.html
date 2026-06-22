@@ -56,20 +56,21 @@ function hrefFor(h,dir){
     if(h.nextUrl) return h.nextUrl;
     return 'https://centiger.github.io/CEN-M10-Earlychurch/';
   }
-    return '../index.html';
+
+  return '../index.html';
 }
-}{if(!h)return '../index.html';if(dir==='prev')return h.prev?`?hub=${h.prev}`:'../index.html';if(dir==='next')return h.next?`?hub=${h.next}`:'https://centiger.github.io/CEN-Matrix-Church/';}
+
 function labelFor(h,dir){
   if(dir==='prev'){
     return h.prev ? '이전허브' : 'Matrix';
   }
 
   if(dir==='next'){
-    return h.next ? '다음허브'
-                  : (h.nextLabel || '초대교회 Matrix');
+    if(h.next) return '다음허브';
+    return h.nextLabel || '초대교회 Matrix';
   }
+
   return '';
-}
 }
 function nodes(items){return (items||[]).map(i=>`<div class="node"><div class="ico">${esc(i.icon)}</div><b>${esc(i.title)}</b><small>${esc(i.text)}</small></div>`).join('')}
 function renderCards(title,items){if(!items||!items.length)return '';const sid=title==='Meaning'?'connections':(title==='파노라마'?'integration':'');return `<section class="card" ${sid?`id="${sid}"`:''}><h2 class="sectionTitle">${title}</h2><div class="infoGrid">${items.map(x=>`<div class="info"><b>${esc(x.title)}</b><p>${esc(x.text)}</p></div>`).join('')}</div></section>`}
